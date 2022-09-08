@@ -214,6 +214,36 @@ p {
     height: 100%;
   }
 }
+@-webkit-keyframes change {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes change {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.change {
+  background: linear-gradient(-45deg, #ce9280, #863655, #301a1a, #8214aa);
+  background-size: 200% 200%;
+  -webkit-animation: change 10s ease infinite;
+          animation: change 10s ease infinite;
+  visibility: visible;
+}
+
 .height {
   -webkit-animation-delay: 1s;
           animation-delay: 1s;
@@ -300,6 +330,21 @@ input:invalid {
 .welcome-button:hover {
   background-color: #f8fafc;
   border-image-source: linear-gradient(to right, #743ad5, #d53a9d);
+}
+
+.kitty-button {
+  color: black;
+  height: 7%;
+  width: 15%;
+  background-color: #ede9fe;
+  transition-duration: 0.3s;
+  border: 0px;
+  outline: 1px solid orchid;
+}
+.kitty-button:hover {
+  width: 17%;
+  background-color: #f8fafc;
+  border-radius: 10px;
 }
 
 .header {
