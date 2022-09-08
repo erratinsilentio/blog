@@ -12,3 +12,6 @@ Building this simple website teached my caring about little details, such as goo
 - ES6 Modules
 - First attempt at SCSS
 - Animations
+- Local storage
+
+check live at: https://erratinsilentio.github.io/blog/
