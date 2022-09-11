@@ -973,25 +973,19 @@ const photoAction = (() => {
     container.appendChild(photo);
 
 
-    const getPhoto = () => {
-      fetch(
-        "https://api.giphy.com/v1/gifs/translate?api_key=AB1Q7N5UIzTk5LDFiN5WQkWvm9H3P7iL&s=cats",
-        { mode: "cors" }
-      ).then(function (response) {
-        return response.json();
-      })
-      .then(function(response){
-        photo.src = response.data.images.original.url
-        photo.style.display = "block";
-        photo.classList.add("height")
-      });
+    async function getGif () {
+      const response = await fetch("https://api.giphy.com/v1/gifs/translate?api_key=AB1Q7N5UIzTk5LDFiN5WQkWvm9H3P7iL&s=cats", { mode: "cors" });
+      const responseToJson = await response.json();
+      photo.src = responseToJson.data.images.original.url;
+      photo.style.display = "block";
+      photo.classList.add("height");
     }
 
     const button = document.createElement("button");
     button.classList.add("kitty-button");
     button.textContent = "MEOW!"
     button.style.fontSize = "clamp(0.5rem, 1vw, 1.5rem)";
-    button.addEventListener('click', getPhoto);
+    button.addEventListener('click', getGif);
     container.appendChild(button);
   };
 
