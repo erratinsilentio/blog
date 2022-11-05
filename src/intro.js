@@ -39,7 +39,7 @@ const introAction = (() => {
     menu.addEventListener("click", toggleMenu);
 
     const home_text = document.createElement("div");
-    home_text.textContent = `Hello, ${localStorage.getItem("Name")}`;
+    home_text.textContent = localStorage.getItem("Name") ? `Welcome, ${localStorage.getItem("Name")}!` : "Welcome, stranger!";
     home_text.classList.add("welcome");
     home_text.classList.add("opacity1s");
     home_text.style.opacity = "0";

@@ -68,11 +68,14 @@ const blogAction = (() => {
 
         right.style.justifyContent = "flex-start";
 
-        const postOne = blogPost('#1', '1 month with The Odin Project', postAction.post_one);
+        const postOne = blogPost('#1', '1 month report', postAction.post_one);
         right.appendChild(postOne);
 
-        const postTwo = blogPost('#2', 'soon');
+        const postTwo = blogPost('#2', '2 month report', postAction.post_two);
         right.appendChild(postTwo);
+
+        const postThree = blogPost('#3', '3 month report', postAction.post_three);
+        right.appendChild(postThree);
         
     }
 
